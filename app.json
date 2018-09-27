@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "untitled",
+    "name": "The Price Check Program",
     "description": "A very interesting project.",
-    "slug": "untitled",
+    "slug": "PCP",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": ["ios", "android"],

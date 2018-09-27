@@ -7,9 +7,8 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeStack/HomeScreen';
 import HomeScreen2 from '../screens/HomeStack/HomeScreen2';
 
-import SettingsScreen from '../screens/SettingsStack/SettingsScreen';
-import FAQ from '../screens/SettingsStack/FAQ';
-import ContactUs from '../screens/SettingsStack/ContactUs';
+import AdminHome from '../screens/AdminStack/AdminHome';
+import Messages from '../screens/AdminStack/Messages';
 
 import colors from '../constants/Colors';
 
@@ -47,14 +46,13 @@ HomeStack.navigationOptions = {
 };
 
 //-----------------------------------------------------------------
-const SettingsStack = createStackNavigator(
+const Admin = createStackNavigator(
   {
-    Settings: SettingsScreen,
-    FAQ : FAQ,
-    ContactUs : ContactUs,
+    Home: AdminHome,
+    Messages : Messages,
   },
   {
-    initialRouteName : 'Settings',
+    initialRouteName : 'Home',
     navigationOptions: {
       headerStyle: {
         backgroundColor: colors.background,
@@ -67,8 +65,8 @@ const SettingsStack = createStackNavigator(
   }
 );
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+Admin.navigationOptions = {
+  tabBarLabel: 'Admin Options',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -79,5 +77,5 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  SettingsStack,
+  Admin,
 });
