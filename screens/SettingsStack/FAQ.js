@@ -32,8 +32,8 @@ export default class FAQScrn extends React.Component {
       answer : `The search results screen will not show results but will show a placeholder text, 'No Products Found'`
     },
     {
-      question : ``,
-      answer : ''
+      question : `How do I add more items into my Favorites List?`,
+      answer : 'You can only add more items into your favorites list through opening the Product List in the Results Screen and pressing on the Save List button at the top. However, this is overwrite your current favorite list'
     },
   ];
 

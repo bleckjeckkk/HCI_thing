@@ -29,7 +29,7 @@ export default class AdminHome extends React.Component {
     /* Go ahead and delete ExpoConfigView and replace it with your
      * content, we just wanted to give you a quick view of your config */
     return (
-      <View style={styles.container}>
+      <View style={{...styles.container, padding : 10}}>
         <ScrollView>
           <View style={{ 
             flex : 1, 

@@ -57,14 +57,24 @@ export default class ContactUsScrn extends React.Component {
   }
 
   sendFeedback(){
-    if(this.state.feedback.length > MAX_LENGTH){
-      Alert.alert(
-        'Length exceeded',
-        `Your message has exceeded ${MAX_LENGTH} characters. Please remove some parts`,
-        [
-            {text: 'OK', onPress: () => this.setState({ loading : false })},
-        ]
-      )
+    if(this.state.feedback.length > MAX_LENGTH || this.state.feedback === ''){
+      if(this.state.feedback.length > MAX_LENGTH){
+        Alert.alert(
+          'Length exceeded',
+          `Your message has exceeded ${MAX_LENGTH} characters. Please remove some parts`,
+          [
+              {text: 'OK', onPress: () => this.setState({ loading : false })},
+          ]
+        )
+      }else{
+        Alert.alert(
+          'Invalid input',
+          `Please enter something in the message box`,
+          [
+              {text: 'OK', onPress: () => this.setState({ loading : false, error : true })},
+          ]
+        )
+      }
     }else{
       fetch(`${PCP_SERVER}/feedbacks/add?feedbackID=${this.state.lastFeedbackID}&userID=${this.state.userID}&feedbackContent=${this.state.feedback}`)
       .then(response => response.json())
@@ -139,7 +149,8 @@ export default class ContactUsScrn extends React.Component {
             <Button title='Send Feedback'
                 loading={this.state.loading}
                 disabled={this.state.loading}
-                buttonStyle={styles.button}
+                buttonStyle={{...styles.button, marginTop : 10}}
+                titleStyle={styles.btnText}
                 onPress={() => this.sendFeedback()}
                 />
           </View>      

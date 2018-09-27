@@ -93,6 +93,7 @@ export default {
         width: "80%"
     },
     button : {
+      marginTop : 5,
       backgroundColor : Colors.cloud,
       borderColor : 'white',
       padding : 10,
@@ -156,7 +157,7 @@ export default {
     },
     faqContainer : {
         marginTop : 10,
-        paddingBottom : 10,
+        padding : 10,
         alignItems: 'center',
         flex : 1,
         width : '100%',
@@ -165,6 +166,10 @@ export default {
         alignItems : 'stretch',
         borderBottomWidth : 1,
         borderBottomColor : Colors.windowTint,
+    },
+    descContainer:{
+        marginTop : 5,
+        padding : 5
     },
     resultContainer : {
         alignItems: 'center',
@@ -240,4 +245,30 @@ export default {
         marginVertical: 0,
         textAlign : 'right'
     },
+    logoutButton : {
+        marginTop: 15,
+        backgroundColor : Colors.desButtonColor,
+        padding : 10,
+        alignItems : 'center',
+    },
+    btnText : {
+        ...Fonts.style.h5,
+        fontWeight: 'bold',
+        color: 'black',
+        marginVertical: 0,
+    },
+    logoutBtnText : {
+        ...Fonts.style.h5,
+        fontWeight: 'bold',
+        color: 'red',
+        marginVertical: 0,
+    },
+    helpContainer : {
+        marginTop : 5,
+        alignItems: 'center',
+        flex : 1,
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        alignItems: 'stretch',
+    }
 }

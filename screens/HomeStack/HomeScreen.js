@@ -161,9 +161,7 @@ export default class HomeScreen extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <View style={{...styles.header, 
-        borderBottomWidth : 2,
-        borderBottomColor : Colors.windowTint,
-    }}>
+          }}>
           <Text style={styles.headerText}>
             THE PRICE CHECK PROGRAM
           </Text>

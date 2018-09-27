@@ -8,6 +8,7 @@ import HomeScreen from '../screens/HomeStack/HomeScreen';
 import HomeScreen2 from '../screens/HomeStack/HomeScreen2';
 
 import SettingsScreen from '../screens/SettingsStack/SettingsScreen';
+import Fav from '../screens/SettingsStack/Favorites';
 import FAQ from '../screens/SettingsStack/FAQ';
 import ContactUs from '../screens/SettingsStack/ContactUs';
 
@@ -52,6 +53,7 @@ const SettingsStack = createStackNavigator(
     Settings: SettingsScreen,
     FAQ : FAQ,
     ContactUs : ContactUs,
+    Fav : Fav,
   },
   {
     initialRouteName : 'Settings',
