@@ -84,8 +84,8 @@ export default {
       width : '95%'
     },
     logoutButton : {
-      backgroundColor : Colors.logout,
-      borderColor : 'white',
+      marginTop : 15,
+      backgroundColor : Colors.desButtonColor,
       padding : 10,
       alignItems : 'center',
     },
@@ -103,7 +103,7 @@ export default {
     cardAction : {
         ...Fonts.style.h5,
         fontWeight: 'bold',
-        color: 'white',
+        color: 'red',
         marginVertical: 0,
     },
     cardActionNotDelete : {

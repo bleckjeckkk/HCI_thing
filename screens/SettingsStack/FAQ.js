@@ -21,7 +21,7 @@ export default class FAQScrn extends React.Component {
     },
     {
       question : `What does [Not Available] before a product's name in the missing items list mean?`,
-      answer : 'A product with that label means that the product is purchasable in the supermarket but is not in stock.'
+      answer : 'A product with that label means that the product is not available in the supermarket.'
     },
     {
       question : `A product is missing in a supermarket!`,
@@ -33,7 +33,7 @@ export default class FAQScrn extends React.Component {
     },
     {
       question : `How do I add more items into my Favorites List?`,
-      answer : 'You can only add more items into your favorites list through opening the Product List in the Results Screen and pressing on the Save List button at the top. However, this is overwrite your current favorite list'
+      answer : 'You can only add more items into your favorites list through opening the Product List in the Results Screen and pressing on the Save List button at the top. However, this will overwrite your current favorite list'
     },
   ];
 
@@ -46,8 +46,6 @@ export default class FAQScrn extends React.Component {
   }
 
   render() {
-    /* Go ahead and delete ExpoConfigView and replace it with your
-     * content, we just wanted to give you a quick view of your config */
     return (
       <View style={styles.container}>
         <Text style={styles.faq_headerText}>

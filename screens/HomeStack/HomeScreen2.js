@@ -285,13 +285,17 @@ export default class HomeScreen extends React.Component {
             <Text style={{...styles.headerText, color : 'black' }}>
               {this.state.headerText}
             </Text>
-            <TouchableOpacity
-              style={{...styles.button2}}
-              onPress={() => {
-                this.saveList();
-              }}>
-              <Text>SAVE LIST</Text>
-            </TouchableOpacity>
+			{this.state.showSave ? (
+				<TouchableOpacity
+				  style={{...styles.button2}}
+				  onPress={() => {
+					this.saveList();
+				  }}>
+				  <Text>SAVE LIST</Text>
+				</TouchableOpacity>
+			):(
+        <View></View>
+      )}
             <ScrollView>
             {this.state.itemsToShow.map(item => (
               <TouchableOpacity 

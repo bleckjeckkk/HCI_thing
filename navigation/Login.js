@@ -20,7 +20,7 @@ import colors from '../constants/Colors';
 import componentStyles from '../assets/styles/ComponentStyles';
 import styles from '../constants/LoginStyles';
 
-const PCP_SERVER = 'http://' + '192.168.254.180' + ':4000'
+import { PCP_SERVER } from '../assets/ImportantThings';
 
 export default class Login extends React.Component {
     static navigationOptions = {
